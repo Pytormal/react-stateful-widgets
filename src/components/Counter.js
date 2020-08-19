@@ -49,8 +49,9 @@ STEP 6:
 import React from 'react'; /* STEP 0 */
 
 export default function Counter() {
-  /* STEP 1 */
-
+/* STEP 1 */
+  const number = 0
+let [count, setCount] = useState(number)
   const increment = () => {
     /* STEP 4 */
   };
