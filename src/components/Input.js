@@ -34,20 +34,23 @@ STEP 6:
   We need to add an extra prop to the <input /> element like so: value={inputValue}
 */
 
-import React from 'react'; /* STEP 0 */
+import React, { useState } from 'react'; /* STEP 0 */
 
 export default function Input() {
   /* STEP 1 */
-
+  let [inputValue, setInputValue] = useState('');
+  console.log('state: ', inputValue)
   const changeInput = evt => {
     // When the input changes, its whole value can be found inside the event object.
     // Log out the synthetic event object 'evt' and see for yourself.
     const { value } = evt.target;
-
-    /* STEP 4 */
+  /* STEP 4 */
+ inputValue  =  value
+    console.log(evt)
   };
   const reset = () => {
-    /* STEP 5 */
+  /* STEP 5 */
+    setInputValue = ''
   };
 
   const style = {
@@ -61,7 +64,7 @@ export default function Input() {
       <h2>Input</h2>
       <div style={style}></div> {/* STEP 3 */}
       <div>
-        <input type='text' onChange={changeInput} /> {/* STEP 6 */}
+        <input type='text' onChange={changeInput} value={inputValue} /> {/* STEP 6 */}
         <button onClick={reset}>Reset</button>
       </div>
     </div>
