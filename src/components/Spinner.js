@@ -41,12 +41,12 @@ import React, { useState } from 'react'; /* STEP 0 */
 
 export default function Spinner() {
   /* STEP 1 */
-  let [spinnerOn, setSpinnerOn] = useState(spinnerOn);
+  let [spinnerOn, setSpinnerOn] = useState(true);
   console.log("state: ", spinnerOn);
   
   const toggleSpinner = () => {
   /* STEP 4 */
-    
+    spiinerOn === false
   };
 
   return (
